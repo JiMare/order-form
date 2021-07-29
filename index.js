@@ -3,19 +3,20 @@ function handleCount(idPlus, idMinus, counter){
     const btnPlus = document.querySelector(`#${idPlus}`);
     const btnMinus = document.querySelector(`#${idMinus}`);
     const count = document.querySelector(`#${counter}`);
+    
     btnPlus.addEventListener('click', (event) => {
-        event.preventDefault();
-        if(count.value + 1 <= 25){
-            count.value++;
+        event.preventDefault();  
+        if(parseInt(count.value) + 1 <= 25){
+           count.value++;
+            
         }
     })
     
     btnMinus.addEventListener('click', (event) => {
         event.preventDefault();
-        if(count.value - 1 >= 0){
+        if(parseInt(count.value) - 1 >= 0){
             count.value--;
-        }
-        
+        }       
     })
 }
 
