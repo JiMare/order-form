@@ -133,7 +133,7 @@ if(isset($_POST) && $nameErr == '' && $surnameErr == '' && $mailErr == ''){
 
     if(isset($ntbqty) && isset($photoqty) && isset($phoneqty)){
         $totalqty = $ntbqty + $photoqty + $phoneqty;
-        if($totalqty > 0 && $totalqty < 76){
+        if($totalqty > 0 && $ntbqty < 26 && $photoqty < 26 && $phoneqty < 26){
  
             echo '<h1>Výsledek objednávky</h1>';
             echo 'Jméno: ' . $name . '<br>';
@@ -141,6 +141,7 @@ if(isset($_POST) && $nameErr == '' && $surnameErr == '' && $mailErr == ''){
             echo 'E-mail: ' . $mail . '<br><br>';
 
             echo '<h2>Objednané položky:</h2>';
+
             if($ntbqty > 0 && $ntbqty < 26){
                 echo '<h3>Notebook</h3>';
                 echo 'počet kusů: ' . $ntbqty . ' ks<br>';
