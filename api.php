@@ -33,8 +33,8 @@ $response = explode("\n",$response);
 unset($response[0]);
 
 
-for($i = 1; $i <  count($response); $i++){
-    $response[$i] = explode("|", $response[$i]);
+for($i = 1; $i <= count($response); $i++){
+   $response[$i] = explode("|", $response[$i]);
 }
 
 if(isset($_POST['totalPrice'])){
