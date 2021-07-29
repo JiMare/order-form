@@ -28,8 +28,10 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
+$response = trim($response);
 $response = explode("\n",$response);
 unset($response[0]);
+
 
 for($i = 1; $i <  count($response); $i++){
     $response[$i] = explode("|", $response[$i]);
